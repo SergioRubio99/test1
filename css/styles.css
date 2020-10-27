@@ -1,0 +1,367 @@
+/*Fuentes*/
+
+@font-face {
+    font-family: "FenixRegular";
+    src: url("fonts/Fenix-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Voga";
+    src: url("fonts/CDType_Voga-font-demo_031216/CDType\ -\ Voga\ Medium.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'), url('fonts/websymbols-regular-webfont.woff') format('woff'), url('fonts/websymbols-regular-webfont.ttf') format('ttf'), url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*ESTILOS GENERALES*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url(img/white_carbon/white_carbon.png);
+}
+
+.wrap_nav,
+.articles_aside {
+    width: 1300px;
+    margin: 0px auto;
+}
+
+.articles_aside {
+    display: grid;
+    /* grid-gap: 80px; */
+    grid-template-columns: 70% 100%;
+    height: 100%;
+}
+
+#sections {
+    background: url(img/pattern.png);
+}
+
+
+/* ESTILOS DEL HEADER */
+
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #2e2e2e;
+    color: white;
+    background-image: url(img/jquerypattern.png);
+}
+
+.header_title {
+    font-family: "FenixRegular";
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    height: 70px;
+    background-color: #ffd000;
+    text-align: left;
+    /* margin-top: 8px; */
+    margin-left: 20px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    line-height: 35px;
+    padding-left: 4px;
+    overflow: hidden;
+    transition: all 800ms;
+}
+
+#logo:hover {
+    background-image: url(img/blueBinary.gif);
+    filter: grayscale(0%) blur(1px) contrast(60%);
+    background-color: white;
+}
+
+#logo h3 {
+    font-weight: bolder;
+    /* margin-left: -5px; */
+    float: right;
+    font-size: 50px;
+    color: black;
+    line-height: 108px;
+}
+
+.menu {
+    float: right;
+    height: 70px;
+    background: #636363;
+    cursor: pointer;
+}
+
+.menu ul li {
+    font-size: 24px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    line-height: 90px;
+    letter-spacing: 2px;
+}
+
+nav.menu:nth-child(2) {
+    display: content;
+    width: 75px;
+    background-color: #636363;
+    padding-left: 5px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "FenixRegular";
+}
+
+.gear {
+    font-family: "WebSymbolsRegular";
+}
+
+#logo .gear {
+    display: block;
+    float: left;
+    margin-top: 8px;
+    margin-left: 26px;
+    line-height: 29px;
+    margin: 0px auto;
+    padding: 0px auto;
+    font-size: 25px;
+    color: black;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.arch_logo a {
+    position: relative;
+    display: block;
+    /* padding: 60px; */
+}
+
+.arch_logo {
+    display: block;
+    /* position: absolute; */
+    /* top: 0px;*/
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 0;
+    transition: all 250ms;
+}
+
+.arch_logo:hover {
+    transform: scale(1.1, 1.1);
+    filter: contrast(250%);
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.menu ul li a:hover {
+    color: #37bcf9;
+    transform: scale(1.2, 1.2);
+}
+
+
+/*ESTILOS DE LA DIAPOSITIVA DE PRESENTACIÓN*/
+
+.presentation {
+    margin-top: 0px;
+    border: 3px solid black;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    animation: moving_banner 800ms forwards;
+}
+
+.presentation img {
+    width: 100%;
+    position: relative;
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 25ch;
+    }
+}
+
+@keyframes moving_banner {
+    0% {
+        opacity: 20%;
+        top: 150px;
+        left: 150px;
+    }
+    100% {
+        opacity: 100%;
+        top: 250px;
+        left: 250px;
+    }
+}
+
+
+/*ESTILOS DEL CUERPO INFERIOR*/
+
+#articles {
+    margin-top: 70px;
+    margin-left: 2%;
+    width: 86%;
+}
+
+.article {
+    position: relative;
+    color: #e2e2e2;
+    border: 2px solid#505050;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #75c8f8;
+    padding: 20px;
+    font-family: "FenixRegular";
+    animation: moving_articles 800ms forwards;
+    height: 70px;
+}
+
+.article_title {
+    margin-bottom: 10px;
+    font-family: "FenixRegular";
+}
+
+.article:nth-child(1) {
+    background-image: url(img/debian-yellow-logo-4k-yellow-brickwall-debian-logo-linux-besthqwallpapers.com-1920x1080.jpg);
+    background-position: 910px 305px;
+    font-size: 60px;
+}
+
+.article:nth-child(1)>img {
+    max-width: 60%;
+}
+
+.article:nth-child(2) {
+    background-image: url(img/dark-space-2880x1800-stars-4k-8k-7935.jpg);
+    background-position: 1436px 709px;
+    font-size: 45px;
+}
+
+.article:nth-child(3) {
+    background-image: url(img/35126_computer_hard_disk.jpg);
+    background-position: 910px 338px;
+    font-size: 50px;
+}
+
+.article:nth-child(3)>img {
+    max-width: 60%;
+}
+
+@keyframes moving_articles {
+    0% {
+        opacity: 0%;
+        top: -15px;
+        left: -15px;
+    }
+    100% {
+        opacity: 90%;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+.article:nth-child(1):hover {
+    transition: 400ms;
+    filter: grayscale(100%);
+    opacity: 90%;
+    top: 10px;
+    left: 10px;
+}
+
+.article:nth-child(2):hover {
+    transition: 400ms;
+    filter: grayscale(100%);
+    opacity: 90%;
+    top: 10px;
+    left: 10px;
+}
+
+.article:nth-child(3):hover {
+    transition: 400ms;
+    filter: grayscale(100%);
+    opacity: 90%;
+    top: 10px;
+    left: 10px;
+}
+
+@keyframes hover_articles {
+    0% {
+        opacity: 90%;
+        top: 10px;
+        left: 10px;
+    }
+    100% {
+        filter: grayscale(100%);
+        opacity: 90%;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+/* INICIO DEL ASIDE */
+
+#aside {
+    margin-top: 100px;
+    max-width: 30%;
+    display: table;
+    /* margin-top: 70px; */
+    margin-right: 5%;
+}
+
+
+/* INICIO DEL FOOTER*/
+
+#footer {
+    margin-top: 50px;
+    font-family: "FenixRegular";
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #636363;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+
+/* 700px 528px */
